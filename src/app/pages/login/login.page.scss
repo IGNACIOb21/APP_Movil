@@ -1,0 +1,87 @@
+/* Estilo global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(150deg, #6C3483, #58d683);
+    height: 100vh;
+}
+
+/* Estilos para el contenedor del formulario */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+/* Tarjeta de formulario centrada */
+ion-card {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del formulario */
+ion-card-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Estilo del ion-title */
+.header-title {
+    font-size: 20px; /* Ajusta el tamaño según tu preferencia */
+    font-weight: bold;
+    color: #fff; /* Color del texto del título */
+}
+
+/* Estilo del botón */
+.login-button {
+    background: #6C3483;
+    color: white;
+}
+
+/* Enlace "Olvidaste tu contraseña" */
+.forgot-password {
+    text-align: right;
+    margin: 10px 0;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Enlace de registro */
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Para pantallas móviles */
+@media screen and (max-width: 600px) {
+    ion-card {
+        width: 90%;
+    }
+}
