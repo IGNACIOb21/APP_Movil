@@ -1,20 +1,98 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      HOME
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Selección de Usuarios</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos básicos */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://img.freepik.com/premium-photo/surprised-student-girl-watching-excited-her-smartphone-city-street_63239-4438.jpg');
+      background-size: cover;
+      background-position: center;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0, 0, 0, 0.5); /* Color negro con 50% de opacidad */
+      z-index: 1; /* Asegura que el overlay esté sobre la imagen */
+    }
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    .container {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    h1 {
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      background-color: #1a06cf;
+      color: rgb(255, 255, 255);
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #2c09ae;
+    }
+
+    .btn a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+    .logo {
+      width: 250px; /* Tamaño reducido */
+      height: auto;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/711px-Logo_DuocUC.svg.png" alt="Logo" class="logo">
+
+  <div class="container">
+    <h1>Sistema de registros de asistencia</h1>
+    <h3>Seleccione una opcion</h3>
+    <div class="btn-group">
+      <!-- Botón para Docentes -->
+      <button class="btn">
+        <a href="docentes.html">Docentes</a>
+      </button>
+
+      <!-- Botón para Alumnos -->
+      <button class="btn">
+        <a href="alumnos.html">Alumnos</a>
+      </button>
+    </div>
   </div>
-</ion-content>
+
+</body>
+</html>
