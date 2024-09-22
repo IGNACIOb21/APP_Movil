@@ -22,6 +22,14 @@ const routes: Routes = [
     path: 'reta-contra',
     loadChildren: () => import('./pages/reta-contra/reta-contra.module').then( m => m.RetaContraPageModule)
   },
+  {
+    path: 'registro',
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'main-page',
+    loadChildren: () => import('./pages/main-page/main-page.module').then( m => m.MainPagePageModule)
+  },
 
 ];
 
