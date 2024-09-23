@@ -1,0 +1,23 @@
+.ion-title {
+    border: 2px solid yellow;
+    padding: 10px;
+    display: inline-block;
+    font-size: 20px; 
+    margin-bottom: 10px; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+
+ion-content {
+    --background: url('https://img.freepik.com/premium-photo/surprised-student-girl-watching-excited-her-smartphone-city-street_63239-4438.jpg') no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px;
+  }
