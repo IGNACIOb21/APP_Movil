@@ -35,6 +35,8 @@ const routes: Routes = [
     path: 'main-page-profe',
     loadChildren: () => import('./pages/main-page-profe/main-page-profe.module').then( m => m.MainPageProfePageModule)
   },
+  
+
  
 
 ];
