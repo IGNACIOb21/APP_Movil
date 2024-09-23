@@ -1,0 +1,27 @@
+.login-container {
+    margin: 35px 5px 0; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 10px);
+    max-width: 400px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-color: #eeeeee;
+}
+
+ion-content {
+    --background: url('https://img.freepik.com/premium-photo/surprised-student-girl-watching-excited-her-smartphone-city-street_63239-4438.jpg') no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px;
+  }
+
+  .logo {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 110px;
+  }
