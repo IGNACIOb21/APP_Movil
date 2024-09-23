@@ -1,34 +1,38 @@
+<ion-header [translucent]="true" class="ion-no-border">
+</ion-header>
+
 <ion-content>
   <div class="login-container">
     <h2>Iniciar Sesión</h2>
-
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/711px-Logo_DuocUC.svg.png" alt="Logo" class="logo">
     <form>
-      <ion-item>
-        <ion-label position="floating">Nombre de Usuario</ion-label>
-        <ion-input type="text" required></ion-input>
-      </ion-item>
+      <ion-list>
+        <h6 style="text-align:left; padding-left: 15px;">Nombre de Usuario</h6>
+        <ion-item>
+          <ion-input label="" [(ngModel)]='username' name="username" maxlength="8" minlength="3"></ion-input>
+        </ion-item>
+        <br>
+        <h6 style="text-align:left; padding-left: 15px;">Contraseña</h6>
+        <ion-item>
+          <ion-input type="password" label="" [(ngModel)]='password' name="password" maxlength="6">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </ion-item>
+      </ion-list>
 
-      <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password" required></ion-input>
-      </ion-item>
-
-      <ion-button expand="full" type="submit">Iniciar Sesión</ion-button>
+      <ion-button expand="black" style="display:flex;" (click)="validateLogin()">COMENZAR</ion-button>
     </form>
 
-    <div class="register-option">
-      <p>No tienes una cuenta? <a routerLink="/register">Regístrate aquí</a></p>
-    </div>
+    <ion-list>
+      <ion-item>
+        {{message}}
+      </ion-item>
+      <div class="register-option">
+        <p>No tienes una cuenta? 
+          <a (click)="navigateToRegister()">Regístrate aquí</a>
+        </p>
+      </div>
+    </ion-list>
   </div>
 </ion-content>
 
-<style>
-  .login-container {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .register-option {
-    margin-top: 20px;
-  }
-</style>
