@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.page.scss'],
 })
 export class MainPagePage implements OnInit {
+  mensaje: string = ''; // Mensaje que se mostrará al hacer clic en el botón
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  mostrarTexto() {
+    this.mensaje = 'Próximamente este botón abrirá la cámara';
   }
-
 }
