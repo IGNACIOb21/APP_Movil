@@ -1,6 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router'; // Import Router
 
+import { ClipboardService } from 'src/app/services/clipboard.service'; // Ajusta la ruta según tu estructura
+
 import { LoginService } from 'src/app/services/login.service';
 import { ToastController } from "@ionic/angular";
 import { User } from "../../models/user";
@@ -10,16 +12,38 @@ import { User } from "../../models/user";
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+
+
 export class LoginPage  {
   message!: string;
   username!: string;
   password!: string;
 
   constructor(
+    private clipboardService: ClipboardService,
+
     private readonly toastController: ToastController,
     private router: Router,
     private readonly loginService: LoginService
-  ) {} // Inject Router
+  ) {} 
+
+
+
+
+  // Método para pegar texto desde el portapapeles en el campo de nombre de usuario
+  async pasteUsername() {
+    const pastedText = await this.clipboardService.pasteFromClipboard();
+    this.username = pastedText;
+  }
+
+  // Método para pegar texto desde el portapapeles en el campo de contraseña
+  async pastePassword() {
+    const pastedText = await this.clipboardService.pasteFromClipboard();
+    this.password = pastedText;
+  }
+
+
+
 
   validateLogin() {
     console.log("validación del inicio de sesión ha comenzado")
