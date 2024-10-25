@@ -2,7 +2,8 @@
 </ion-header>
 
 <ion-content>
-  <div class="login-container">
+  <div class="center">
+    <br>
     <h2>Iniciar Sesión</h2>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/711px-Logo_DuocUC.svg.png" alt="Logo" class="logo">
     <form>
@@ -14,13 +15,16 @@
         <br>
         <h6 style="text-align:left; padding-left: 15px;">Contraseña</h6>
         <ion-item>
-          <ion-input type="password" label="" [(ngModel)]='password' name="password" maxlength="6">
+          <ion-input type="password" label="" [(ngModel)]='password' name="password" maxlength="16">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
         </ion-item>
       </ion-list>
 
-      <ion-button expand="black" style="display:flex;" (click)="validateLogin()">COMENZAR</ion-button>
+        <ion-button expand="block" (click)="validateLogin()">
+    <ion-icon name="log-in-outline" slot="start"></ion-icon>
+    Ingresar
+  </ion-button>
     </form>
 
     <ion-list>
