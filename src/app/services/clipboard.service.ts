@@ -1,4 +1,5 @@
-// src/services/clipboard.service.ts
+// para pegar
+// ======================== API de clipboard ==================================//
 import { Injectable } from '@angular/core';
 import { Clipboard } from '@capacitor/clipboard';
 
