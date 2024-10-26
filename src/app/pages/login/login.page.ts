@@ -1,7 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router'; // Import Router
 
-import { ClipboardService } from 'src/app/services/clipboard.service'; // Ajusta la ruta según tu estructura
+// Ajusta la ruta a la API de clipboard
+import { ClipboardService } from 'src/app/services/clipboard.service'; 
 
 import { LoginService } from 'src/app/services/login.service';
 import { ToastController } from "@ionic/angular";
@@ -29,7 +30,7 @@ export class LoginPage  {
 
 
 
-
+ //===================== linea de codigo de la API ========================================//
   // Método para pegar texto desde el portapapeles en el campo de nombre de usuario
   async pasteUsername() {
     const pastedText = await this.clipboardService.pasteFromClipboard();
@@ -41,7 +42,7 @@ export class LoginPage  {
     const pastedText = await this.clipboardService.pasteFromClipboard();
     this.password = pastedText;
   }
-
+ //=============================================================//
 
 
 
