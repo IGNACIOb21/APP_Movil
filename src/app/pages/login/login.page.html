@@ -11,7 +11,7 @@
         <h6 style="text-align:left; padding-left: 15px;">Nombre de Usuario</h6>
         <ion-item>
           <ion-input label="" [(ngModel)]='username' name="username" maxlength="8" minlength="3"></ion-input>
-          <ion-button slot="end" (click)="pasteUsername()">Pegar</ion-button> <!-- Botón para pegar en nombre de usuario -->
+          <ion-button slot="end" (click)="pasteUsername()">Pegar</ion-button> <!-- Botón para pegar en nombre de usuario de la API -->
         </ion-item>
         <br>
         <h6 style="text-align:left; padding-left: 15px;">Contraseña</h6>
@@ -19,7 +19,7 @@
           <ion-input type="password" label="" [(ngModel)]='password' name="password" maxlength="16">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
-          <ion-button slot="end" (click)="pastePassword()">Pegar</ion-button> <!-- Botón para pegar en contraseña -->
+          <ion-button slot="end" (click)="pastePassword()">Pegar</ion-button> <!-- Botón para pegar en contraseña de la API -->
         </ion-item>
       </ion-list>
 
