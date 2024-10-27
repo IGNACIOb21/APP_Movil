@@ -25,3 +25,11 @@ ion-content {
     right: 9%;
     width: 110px;
   }
+
+/* Estilos para el enlace de restablecimiento de contraseña */
+a {
+  color: #007bff; /* Color del enlace */
+  text-decoration: underline; /* Subrayar el enlace */
+  margin-top: 10px; /* Espacio encima del enlace */
+  display: inline-block; /* Para mantener el margen */
+}

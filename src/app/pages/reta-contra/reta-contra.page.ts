@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-reta-contra',
@@ -11,24 +12,29 @@ export class RetaContraPage {
   username: string | undefined;
   email: string | undefined;
   message: string | undefined;
+  users: User[] = [];
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) {
+    // Cargar usuarios desde el archivo JSON
+    this.loadUsers();
+  }
+
+  loadUsers() {
+    this.http.get<{ users: User[] }>('assets/info.json').subscribe(data => {
+        this.users = data.users;
+        console.log(this.users); // Verifica que los usuarios se carguen correctamente
+    });
+}
+
 
   submitRequest() {
-    const requestData = { username: this.username, email: this.email };
+    const user = this.users.find(u => u.email === this.email && u.username === this.username);
     
-
-    this.http.post('/api/reset-password/request', requestData).subscribe(
-      (response: any) => {
-        this.message = response.message;
-
-        if (response.success) {
-          this.router.navigate(['/reset-password-confirm']);
-        }
-      },
-      (error) => {
-        this.message = error.error.message || 'Error al restablecer la contraseña.';
-      }
-    );
+    if (user) {
+      // Si el usuario existe redirige a reset-contra
+      this.router.navigate(['/reset-contra'], { state: { email: this.email } });
+    } else {
+      this.message = 'Usuario o correo electrónico no encontrados.';
+    }
   }
 }

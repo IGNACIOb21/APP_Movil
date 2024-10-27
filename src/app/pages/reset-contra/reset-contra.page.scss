@@ -1,0 +1,17 @@
+ion-content {
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    padding: 20px;
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 400px; /* Ancho máximo del formulario */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para resaltar */
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+  
