@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ResetGuard } from './guards/reset.guard';
 
 const routes: Routes = [
   {
@@ -20,10 +21,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },
   {
-    path: 'reta-contra',
-    loadChildren: () => import('./pages/reta-contra/reta-contra.module').then( m => m.RetaContraPageModule)
-  },
-  {
     path: 'registro',
     loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
@@ -36,10 +33,15 @@ const routes: Routes = [
     loadChildren: () => import('./pages/main-page-profe/main-page-profe.module').then( m => m.MainPageProfePageModule)
   },
   {
-    path: 'reset-contra',
-    loadChildren: () => import('./pages/reset-contra/reset-contra.module').then( m => m.ResetContraPageModule)
+    path: 'reta-contra',
+    loadChildren: () => import('./pages/reta-contra/reta-contra.module').then(m => m.RetaContraPageModule),
+    canActivate: [ResetGuard] // Aplicar ResetGuard aquí
   },
-
+  {
+    path: 'reset-contra',
+    loadChildren: () => import('./pages/reset-contra/reset-contra.module').then(m => m.ResetContraPageModule),
+    canActivate: [ResetGuard] // Aplicar ResetGuard aquí
+  }
   
 
  
