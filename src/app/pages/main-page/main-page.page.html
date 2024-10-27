@@ -1,0 +1,29 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="medium">
+    <ion-title>Duoc UC Alumnos</ion-title>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/login']">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirmLogout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <hr>
+      <ion-title>Bienvenido [nombre_usuario]</ion-title>
+      
+      <div class="button-container">
+        <ion-button (click)="mostrarTexto()">Leer QR</ion-button>
+      </div>
+      <p id="mensaje">{{ mensaje }}</p> <!-- Mostrar el mensaje aquí -->
+    </ion-toolbar>
+  </ion-header>
+</ion-content>

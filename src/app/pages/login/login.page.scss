@@ -1,0 +1,27 @@
+.center {
+  position: absolute;
+  top: 30%; /* Posición vertical en el centro */
+  left: 50%; /* Posición horizontal en el centro */
+  transform: translate(-50%, -50%); /* Asegura que el centro del elemento esté en el centro de la pantalla */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  width: 95%;
+  background-color: #eeeeee;
+  padding: 20px; /* Añadir padding para dar espacio dentro del contenedor */
+}
+
+ion-content {
+  --background: url('https://img.freepik.com/premium-photo/surprised-student-girl-watching-excited-her-smartphone-city-street_63239-4438.jpg') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.center .logo {
+    position: absolute;
+    top: 8%;
+    right: 9%;
+    width: 110px;
+  }

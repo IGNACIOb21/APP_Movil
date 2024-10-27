@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Duoc UC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <style>
+      body {
+        background-image: url(/fondooo.jpg);
+        background-size: cover; /* La imagen cubrirá todo el fondo */
+        background-position: center; /* La imagen estará centrada */
+        background-repeat: no-repeat; /* Evitar que la imagen se repita */
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* Estilos para centrar y bordear el h2 */
+      h2 {
+        border: 2px solid yellow; /* Borde amarillo */
+        padding: 10px;
+        display: inline-block;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        flex-direction: column;
+      }
+    </style>
+
+    <ion-toolbar>
+      <hr>
+      <h2>
+        <ion-title size="large">Bienvenido [nombre_usuario]</ion-title>
+      </h2>
+
+      <script>
+        function mostrarTexto() {
+          document.getElementById("mensaje").innerHTML = "<h3>Próximamente este botón creará un qr aleatorio</h3>";
+        }
+      </script>
+      <button onclick="mostrarTexto()">Crear QR</button>
+      <p id="mensaje"></p>
+    </ion-toolbar>
+  </ion-header>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+</ion-content>
