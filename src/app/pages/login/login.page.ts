@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router'; // Import Router
 
 // Ajusta la ruta a la API de clipboard
@@ -13,8 +13,6 @@ import { User } from "../../models/user";
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-
-
 export class LoginPage  {
   message!: string;
   username!: string;
@@ -22,15 +20,11 @@ export class LoginPage  {
 
   constructor(
     private clipboardService: ClipboardService,
-
     private readonly toastController: ToastController,
     private router: Router,
     private readonly loginService: LoginService
-  ) {} 
+  ) {}
 
-
-
- //===================== linea de codigo de la API ========================================//
   // Método para pegar texto desde el portapapeles en el campo de nombre de usuario
   async pasteUsername() {
     const pastedText = await this.clipboardService.pasteFromClipboard();
@@ -42,9 +36,6 @@ export class LoginPage  {
     const pastedText = await this.clipboardService.pasteFromClipboard();
     this.password = pastedText;
   }
- //=============================================================//
-
-
 
   validateLogin() {
     console.log("validación del inicio de sesión ha comenzado")
@@ -91,5 +82,11 @@ export class LoginPage  {
   navigateToRegister() {
     this.router.navigate(['/registro']); // Ensure this route exists in your app
   }
+
+  // NUEVO MÉTODO PARA NAVEGAR A "reta-contra"
+  navigateToResetPassword() {
+    this.router.navigate(['/reta-contra']);
+  }
 }
+
 
