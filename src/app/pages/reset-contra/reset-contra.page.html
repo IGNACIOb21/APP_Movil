@@ -1,0 +1,19 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Nueva Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="form-container">
+    <form (ngSubmit)="submitNewPassword()">
+      <ion-item>
+        <ion-label position="floating">Nueva Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="newPassword" name="newPassword" required></ion-input>
+      </ion-item>
+      <ion-button expand="full" type="submit">Actualizar Contraseña</ion-button>
+    </form>
+    <ion-item *ngIf="message">{{ message }}</ion-item>
+  </div>
+</ion-content>
+
